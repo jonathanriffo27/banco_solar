@@ -17,7 +17,7 @@ app.post('/usuario', async (req, res) => {
 		}
 		catch(error){
 			if (error.code == '23505') {
-        		return res.status(400).send({mensaje: 'Este nombre de candidato ya existe'})
+        		return res.status(400).send({mensaje: 'Este nombre de usuario ya existe'})
       		}
       		return res.status(400).send({ mensaje: error.message });
 		}
